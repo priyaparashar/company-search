@@ -117,8 +117,8 @@ export class ResultsComponent {
   }
   
   ngOnInit(): void {
-    const routeParams = this.route.snapshot.paramMap;
-    this.searchTerm = routeParams.get('searchTerm') || '';
-    this.fetchData(this.searchTerm);
+    this.searchTerm = this.route.snapshot.queryParams['searchTerm']
+    if (this.searchTerm) this.fetchData(this.searchTerm);
+  
   }
 }
