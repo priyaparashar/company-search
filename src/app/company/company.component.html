@@ -1,0 +1,22 @@
+<ng-container *ngIf="companies">
+  <ul>
+    <li *ngFor="let company of companies">
+      <a
+        [routerLink]="[company.links.self]"
+       (click)="setCompanyData(company)"
+        routerLinkActive="mat-list-item-active"
+        >{{ company.title }}</a
+      >
+      <p>
+        {{ company.company_number }} - Incorporated on
+        {{ company.date_of_creation }}
+      </p>
+      <p>
+        {{ company.address.address_line_1 }}, {{ company.address.locality }},
+        {{ company.address.premises }}, {{ company.address.country }},
+        {{ company.address.postal_code }}
+      </p>
+    </li>
+  </ul>
+  <mat-divider></mat-divider>
+</ng-container>

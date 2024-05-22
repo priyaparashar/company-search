@@ -1,0 +1,8 @@
+<div class="company-detail">
+    <h1>{{company?.title}}</h1>
+<p class="margin-bottom-40">Company Number <strong>{{company?.company_number}}</strong></p>
+<div class="margin-bottom-40" *ngFor="let officer of officers">
+<p>{{officer?.name}}</p>
+<p ><strong>{{officer?.officer_role}}</strong></p>
+</div>
+</div>

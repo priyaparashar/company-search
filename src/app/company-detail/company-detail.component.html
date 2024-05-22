@@ -1,0 +1,17 @@
+<div class="company-detail">
+    <h1>{{company?.title}}</h1>
+<p class="margin-bottom-40">Company Number <strong>{{company?.company_number}}</strong></p>
+
+<p>Registered Office address</p>
+<p class="margin-bottom-40"><strong>{{company?.address?.address_line_1}}, {{company?.address?.locality}}, {{company?.address?.premises}}, {{company?.address?.country}}, {{company?.address?.postal_code}}</strong></p>
+
+<p>Company Status</p>
+    <p class="margin-bottom-40"><strong>{{company?.company_status}}</strong></p>
+<p>Company Type</p>
+    <p class="margin-bottom-40"><strong>{{company?.company_type}}</strong></p>
+<p>Incorporated On</p>
+    <p><strong>{{company?.date_of_creation}}</strong></p>
+<p><a [routerLink]="['/officers', company?.company_number]">List Officers</a></p>
+
+
+</div>
